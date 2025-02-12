@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Random Walk Animation</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="color-scheme" content="dark light" />
+		<link rel="stylesheet" href="/css/reset.css" />
+		<link rel="stylesheet" href="/css/styles.css" />
+		<style type="text/css">
+			:root {
+				--bg-color: #203030;
+				--cell-size: 50px;
+			}
+		</style>
+		<script>
+			gridSize = 3;
+			startCell = [1, 1];
+		</script>
+	</head>
+	<body class="three-column-layout">
+		<div id="grid"></div>
+		<script type="module">
+			import { startWalker } from '/js/walk.js';
+
+			startWalker();
+		</script>
+	</body>
+</html>

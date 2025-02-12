@@ -1,0 +1,18 @@
+body {
+	display: grid;
+	place-items: center;
+	background: var(--bg-color);
+}
+
+#grid {
+	display: grid;
+	grid-template-columns: repeat(var(--grid-size, 2), auto);
+	justify-content: center;
+	align-items: center;
+}
+
+.cell {
+	width: var(--cell-size);
+	aspect-ratio: 1 / 1;
+	border: 1px solid blue;
+}
