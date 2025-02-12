@@ -1,6 +1,12 @@
+html {
+	font-family: sans-serif;
+}
+
 body {
-	display: grid;
-	place-items: center;
+	text-align: center;
+	/* 2024 way to vertically align :) */
+	align-content: center;
+
 	background: var(--bg-color);
 }
 
@@ -12,7 +18,21 @@ body {
 }
 
 .cell {
+	--_opacity: calc(pow(var(--opacity, 0), 1 / 2.2));
+	text-align: center;
+	align-content: center;
 	width: var(--cell-size);
 	aspect-ratio: 1 / 1;
-	border: 1px solid blue;
+	border: 1px solid #000;
+	background: rgb(255 255 255 / var(--_opacity));
+	color: black;
+}
+
+.cell::after {
+	content: attr(data-value);
+	background: #ffffff33;
+	min-width: 2ch;
+	padding-inline: 0.5ch;
+	display: inline-block;
+	border-radius: 5px;
 }

@@ -10,15 +10,18 @@
 		<style type="text/css">
 			:root {
 				--bg-color: #203030;
-				--cell-size: 50px;
+				--cell-size: 60px;
 			}
 		</style>
 		<script>
 			gridSize = 3;
-			startCell = [1, 1];
+			startCell = [0, 0].map((c) => Math.floor(gridSize / 2));
+			// startCell = [0, 0];
 		</script>
 	</head>
 	<body class="three-column-layout">
+		<h3>Step: <span id="step">0</span></h3>
+		<br />
 		<div id="grid"></div>
 		<script type="module">
 			import { startWalker } from '/js/walk.js';
